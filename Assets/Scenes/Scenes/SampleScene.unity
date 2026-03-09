@@ -151,10 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed82e807155bba4d9c15a52c572d038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyExplosion: {fileID: 6745026399642912263, guid: 5b7eab0d6c987024dbda15ba44a66dd1, type: 3}
-  asteroidExplosion: {fileID: 6745026399642912263, guid: 6ffade267de55ae459c9409ff0af7def, type: 3}
-  healthPickup: {fileID: 6745026399642912263, guid: 77fed4815c2557d4a89743afddcad936, type: 3}
-  muzzleFlash: {fileID: 6745026399642912263, guid: 7bd71f21d24884d4e98b952693659574, type: 3}
 --- !u!4 &94516160
 Transform:
   m_ObjectHideFlags: 0
@@ -1088,7 +1084,13 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8782613707171225727, guid: a078b18177d724646844034e0f0a519e, type: 3}
   healthPackPrefab: {fileID: 818135382817115812, guid: 35ebd5bbeec8eb140aefd411b4f29e8f, type: 3}
   asteroidPrefab: {fileID: 5614838731075814008, guid: e0af3d1897640044e929492a21245d89, type: 3}
+  obstaclePrefabs:
+  - {fileID: 4607998926308685165, guid: fea343f1b8aacda46a68fd5468572216, type: 3}
+  - {fileID: 5876711226679709987, guid: ca7a533966376954985b5ba8b1ac86af, type: 3}
+  - {fileID: 8498943877385140416, guid: ff78ee0057d875f45958255b3949b58b, type: 3}
   spawnRate: 2
+  corridorSpawnRate: 8
+  corridorMinRate: 5
   spawnX: 10
   maxY: 4
 --- !u!4 &664245353
@@ -2244,6 +2246,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3992968881952427110, guid: 4786c9c78dc2f074ca452b53da6eafb9, type: 3}
       propertyPath: m_Name
+      value: ScoreTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992968881952427110, guid: 4786c9c78dc2f074ca452b53da6eafb9, type: 3}
+      propertyPath: m_TagString
       value: ScoreTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []

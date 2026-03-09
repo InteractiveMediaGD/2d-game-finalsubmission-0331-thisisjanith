@@ -53,8 +53,11 @@ public class Projectile : MonoBehaviour
         }
         // Logic for hitting walls (Cleanup)
         // We check tags so we don't accidentally destroy the bullet when spawning inside the player
-        else if (!other.CompareTag("Player") && !other.CompareTag("ScoreTrigger") && !other.CompareTag("HealthPack"))
+        // Also skip Obstacle (corridor walls) so bullets can fly past them
+        else if (!other.CompareTag("Player") && !other.CompareTag("ScoreTrigger") && !other.CompareTag("HealthPack") && !other.CompareTag("Obstacle"))
         {
+            // DEBUG: Find out what is destroying the bullet
+            Debug.Log("Bullet destroyed by: " + other.gameObject.name + " (Tag: " + other.tag + ") at position: " + other.transform.position);
             Destroy(gameObject);
         }
     }
